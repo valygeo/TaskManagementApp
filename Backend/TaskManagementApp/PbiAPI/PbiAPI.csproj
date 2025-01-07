@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonService\CommonServices.csproj" />
+    <ProjectReference Include="..\PbiServices\PbiServices.csproj" />
+    <ProjectReference Include="..\SprintService\SprintServices.csproj" />
+    <ProjectReference Include="..\UserService\UserServices.csproj" />
+  </ItemGroup>
+
+</Project>

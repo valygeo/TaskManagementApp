@@ -1,0 +1,343 @@
+<div class="layout" fxLayout="row">
+  <app-header></app-header>
+  <app-menu class="sidenav"></app-menu>
+
+  <div class="right-content" fxLayout="column">
+    <div class="content">
+      <h1
+        class="titleText"
+        style="font-family: 'Times New Roman', Times, serif"
+      >
+        All projects
+      </h1>
+      <h2 class="searchInput">
+        <mat-icon>search</mat-icon>
+
+        <mat-form-field>
+          <input
+            type="tel"
+            matInput
+            placeholder="Find a project"
+            [(ngModel)]="projectName"
+          />
+        </mat-form-field>
+      </h2>
+
+      <mat-card
+        class="example-card"
+        *ngFor="let project of userProjects | filter: projectName"
+      >
+        <mat-card-header>
+          <mat-card-title>{{ project.project_Name }}</mat-card-title>
+          <mat-card-subtitle>{{
+            project.project_Description
+          }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text"
+          >Start date: {{ project.start_Date_Project | date: "mediumDate" }}
+        </mat-card-content>
+        <mat-card-content class="text"
+          >End date:
+          {{ project.end_Date_Project | date: "mediumDate" }}</mat-card-content
+        >
+        <mat-card-actions>
+          <!-- <button mat-raised-button (click)="open(content)">Edit</button>
+          <ng-template #content let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Edit project</h4>
+              <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form
+                #projectsForm="ngForm"
+                (ngSubmit)="
+                  updateDbProject(project.project_Id, projectsForm.value)
+                "
+              >
+                <div class="form-group">
+                  <label for="project_Name">Project name</label>
+                  <div class="input-group">
+                    <input
+                      name="project_Name"
+                      ngModel
+                      type="text"
+                      id="project_Name"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="project_Description">Project description</label>
+                  <div class="input-group">
+                    <input
+                      name="project_Description"
+                      ngModel
+                      id="project_Description"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="start_Date_Project">Start date</label>
+
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      placeholder="yyyy-mm-dd"
+                      name="start_Date_Project"
+                      [(ngModel)]="modelStartDate"
+                      ngbDatepicker
+                      (dateSelect)="convertStartDate()"
+                      #start_Date_Project="ngbDatepicker"
+                    />
+
+                    <button
+                      class="btn btn-outline-secondary calendar"
+                      (click)="start_Date_Project.toggle()"
+                      type="button"
+                    ></button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="end_Date_Project">End date</label>
+                  <div class="input-group">
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        placeholder="yyyy-mm-dd"
+                        name="end_Date_Project"
+                        [(ngModel)]="modelEndDate"
+                        ngbDatepicker
+                        (dateSelect)="convertEndDate()"
+                        #end_Date_Project="ngbDatepicker"
+                      />
+
+                      <button
+                        class="btn btn-outline-secondary calendar"
+                        (click)="end_Date_Project.toggle()"
+                        type="button"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-dark"
+                    (click)="modal.close('Save click')"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </ng-template> -->
+
+          <button class="button1" mat-raised-button routerLink="/dashboard">
+            Board
+          </button>
+          <button
+            mat-raised-button
+            class="button1"
+            (click)="getDbUsersByProjectId(project.project_Id); open(content2)"
+          >
+            Contribuitors
+          </button>
+
+          <ng-template #content2 let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">
+                Users working on this project
+              </h4>
+
+              <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <mat-list role="list" *ngFor="let user of usersWorkingOnAProject">
+                <mat-list-item role="listitem">{{
+                  user.username
+                }}</mat-list-item>
+              </mat-list>
+            </div>
+          </ng-template>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card
+        class="example-card-1"
+        *ngFor="let project of projectsDifference | filter: projectName"
+      >
+        <mat-card-header>
+          <mat-card-title>{{ project.project_Name }} </mat-card-title>
+          <mat-card-subtitle>{{
+            project.project_Description
+          }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text"
+          >Start date: {{ project.start_Date_Project | date: "mediumDate" }}
+        </mat-card-content>
+        <mat-card-content class="text"
+          >End date:
+          {{ project.end_Date_Project | date: "mediumDate" }}</mat-card-content
+        >
+        <mat-card-actions>
+          <!-- <button mat-raised-button (click)="open(content)">Edit</button>
+          <ng-template #content let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Edit project</h4>
+              <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form
+                #projectsForm="ngForm"
+                (ngSubmit)="
+                  updateDbProject(project.project_Id, projectsForm.value)
+                "
+              >
+                <div class="form-group">
+                  <label for="project_Name">Project name</label>
+                  <div class="input-group">
+                    <input
+                      name="project_Name"
+                      ngModel
+                      type="text"
+                      id="project_Name"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="project_Description">Project description</label>
+                  <div class="input-group">
+                    <input
+                      name="project_Description"
+                      ngModel
+                      id="project_Description"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="start_Date_Project">Start date</label>
+
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      placeholder="yyyy-mm-dd"
+                      name="start_Date_Project"
+                      [(ngModel)]="modelStartDate"
+                      ngbDatepicker
+                      (dateSelect)="convertStartDate()"
+                      #start_Date_Project="ngbDatepicker"
+                    />
+
+                    <button
+                      class="btn btn-outline-secondary calendar"
+                      (click)="start_Date_Project.toggle()"
+                      type="button"
+                    ></button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="end_Date_Project">End date</label>
+                  <div class="input-group">
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        placeholder="yyyy-mm-dd"
+                        name="end_Date_Project"
+                        [(ngModel)]="modelEndDate"
+                        ngbDatepicker
+                        (dateSelect)="convertEndDate()"
+                        #end_Date_Project="ngbDatepicker"
+                      />
+
+                      <button
+                        class="btn btn-outline-secondary calendar"
+                        (click)="end_Date_Project.toggle()"
+                        type="button"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-dark"
+                    (click)="modal.close('Save click')"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </ng-template> -->
+          <button
+            class="button1"
+            mat-raised-button
+            (click)="enrollUser(this.userId, project.project_Id)"
+          >
+            Enroll
+          </button>
+          <button class="button1" mat-raised-button routerLink="/dashboard">
+            Board
+          </button>
+          <button
+            mat-raised-button
+            class="button1"
+            (click)="getDbUsersByProjectId(project.project_Id); open(content2)"
+          >
+            Contribuitors
+          </button>
+
+          <ng-template #content2 let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">
+                Users working on this project
+              </h4>
+
+              <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <mat-list role="list" *ngFor="let user of usersWorkingOnAProject">
+                <mat-list-item role="listitem">{{
+                  user.username
+                }}</mat-list-item>
+              </mat-list>
+            </div>
+          </ng-template>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div></div>

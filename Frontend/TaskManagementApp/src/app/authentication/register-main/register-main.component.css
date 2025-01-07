@@ -1,0 +1,10 @@
+.body-register {
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    #e1e1fe 0%,
+    #e1e1fe 50%,
+    white 50%,
+    white 100%
+  );
+}

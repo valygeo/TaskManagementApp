@@ -1,0 +1,452 @@
+<!-- <div class="container">
+  <div class="example-container">
+    <h2>To do</h2>
+
+    <div
+      cdkDropList
+      #todoList="cdkDropList"
+      [cdkDropListData]="todo"
+      [cdkDropListConnectedTo]="[doneList, progressList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="example-box" *ngFor="let task of todo" cdkDrag>
+        {{ task.task_Name }}
+      </div>
+    </div>
+  </div>
+  <div class="example-container">
+    <h2>In progress</h2>
+
+    <div
+      cdkDropList
+      #progressList="cdkDropList"
+      [cdkDropListData]="progress"
+      [cdkDropListConnectedTo]="[todoList, doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="example-box" *ngFor="let task of progress" cdkDrag>
+        {{ task.task_Name }}
+      </div>
+    </div>
+  </div>
+  <div class="example-container">
+    <h2>Done</h2>
+
+    <div
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[todoList, progressList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="example-box" *ngFor="let task of done" cdkDrag>
+        {{ task.task_Name }}
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <div>
+  <ul>
+    <li *ngFor="let project of projects">
+      Name {{ project.project_Name }} startDate
+      {{ project.start_Date_Project }} endDate {{ project.end_Date_Project }}
+    </li>
+  </ul>
+</div> -->
+<div class="layout" fxLayout="row">
+  <app-menu></app-menu>
+  <div class="right-content" fxLayout="column">
+    <app-header></app-header>
+    <div class="content">
+      <h1
+        class="titleText"
+        style="font-family: 'Times New Roman', Times, serif"
+      >
+        Your work
+      </h1>
+      <h2 class="searchInput">
+        <mat-icon>search</mat-icon>
+
+        <mat-form-field>
+          <input
+            type="tel"
+            matInput
+            placeholder="Find a project"
+            [(ngModel)]="projectName"
+          />
+        </mat-form-field>
+      </h2>
+
+      <mat-card
+        class="example-card"
+        *ngFor="let project of projects | filter: projectName"
+      >
+        <mat-card-header>
+          <mat-card-title> {{ project.project_Name }}</mat-card-title>
+          <mat-card-subtitle>{{
+            project.project_Description
+          }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text"
+          >Start date: {{ project.start_Date_Project | date: "mediumDate" }}
+        </mat-card-content>
+        <mat-card-content class="text"
+          >End date:
+          {{ project.end_Date_Project | date: "mediumDate" }}</mat-card-content
+        >
+        <mat-card-actions class="mat-card-actions1">
+          <button
+            class="button1"
+            mat-raised-button
+            (click)="onEditClicked(project.project_Id)"
+            (click)="open(content)"
+          >
+            Edit
+          </button>
+          <ng-template #content let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Edit project</h4>
+              <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form
+                [formGroup]="editProject"
+                (ngSubmit)="
+                  updateDbProject(project.project_Id, editProject.value)
+                "
+              >
+                <div class="form-group">
+                  <label for="project_Name">Project name</label>
+                  <div class="input-group">
+                    <input
+                      name="project_Name"
+                      type="text"
+                      id="project_Name"
+                      formControlName="project_Name"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="project_Description">Project description</label>
+                  <div class="input-group">
+                    <input
+                      name="project_Description"
+                      id="project_Description"
+                      type="text"
+                      class="form-control"
+                      formControlName="project_Description"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="start_Date_Project">Start date</label>
+
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      placeholder="yyyy-mm-dd"
+                      name="start_Date_Project"
+                      formControlName="start_Date_Project"
+                      [(ngModel)]="modelStartDate"
+                      ngbDatepicker
+                      (dateSelect)="convertStartDate()"
+                      #start_Date_Project="ngbDatepicker"
+                    />
+
+                    <button
+                      class="btn btn-outline-secondary calendar"
+                      (click)="start_Date_Project.toggle()"
+                      type="button"
+                    ></button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="end_Date_Project">End date</label>
+                  <div class="input-group">
+                    <div class="input-group">
+                      <input
+                        class="form-control"
+                        placeholder="yyyy-mm-dd"
+                        formControlName="end_Date_Project"
+                        name="end_Date_Project"
+                        [(ngModel)]="modelEndDate"
+                        ngbDatepicker
+                        (dateSelect)="convertEndDate()"
+                        #end_Date_Project="ngbDatepicker"
+                      />
+
+                      <button
+                        class="btn btn-outline-secondary calendar"
+                        (click)="end_Date_Project.toggle()"
+                        type="button"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-dark"
+                    (click)="modal.close('Save click')"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </ng-template>
+
+          <button
+            class="button1"
+            mat-raised-button
+            (click)="getSprintsByProjectId(project.project_Id)"
+            routerLink="/dashboard"
+          >
+            Board
+          </button>
+          <button
+            mat-raised-button
+            class="mat-raised-button1"
+            (click)="open(content6); getProjectById(project.project_Id)"
+          >
+            Add sprint
+          </button>
+
+          <ng-template #content6 let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">New Sprint</h4>
+              <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <!-- <form
+              [formGroup]="pbiForm"
+              (ngSubmit)="
+                addPbi(pbiForm.value)
+              "
+            > -->
+              <form
+                [formGroup]="sprintForm"
+                (ngSubmit)="addSprint(sprintForm.value)"
+              >
+                <div class="form-group">
+                  <label for="pbi_Name">Sprint name</label>
+                  <div class="input-group">
+                    <input
+                      name="sprint_Name"
+                      type="text"
+                      id="sprint_Name"
+                      formControlName="sprint_Name"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <em
+                      *ngIf="
+                        validateControlSprint('sprint_Name') &&
+                        hasErrorSprint('sprint_Name', 'required')
+                      "
+                      >Name is required</em
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="pbi_Description">Sprint description</label>
+                  <div class="input-group">
+                    <input
+                      name="sprint_Description"
+                      id="sprint_Description"
+                      type="text"
+                      class="form-control"
+                      formControlName="sprint_Description"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <em
+                      *ngIf="
+                        validateControlSprint('sprint_Description') &&
+                        hasErrorSprint('sprint_Description', 'required')
+                      "
+                      >Description is required</em
+                    >
+                  </div>
+                </div>
+                <!-- <div class="form-group">
+              <label for="pbi_Type">Pbi Type</label>
+              <mat-select formControlName="pbi_Type" required>
+                <mat-option>--</mat-option>
+                <mat-option value="Bug">Bug</mat-option>
+                <mat-option value="Feature">Feature</mat-option>
+              </mat-select>
+              <div class="input-group">
+                <input
+                  name="pbi_Type"
+                  id="pbi_Type"
+                  type="text"
+                  class="form-control"
+                  formControlName="pbi_Type"
+                />
+              </div>
+              <div class="col-md-6">
+                <em
+                  *ngIf="
+                    validateControl('pbi_Type') &&
+                    hasError('pbi_Type', 'required')
+                  "
+                  >Type is required</em
+                >
+              </div>
+            </div> -->
+
+                <div class="form-group">
+                  <label for="start_Date_Sprint">Start date</label>
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      placeholder="yyyy-mm-dd"
+                      name="start_Date_Sprint"
+                      formControlName="start_Date_Sprint"
+                      [(ngModel)]="modelStartDate"
+                      ngbDatepicker
+                      (dateSelect)="convertStartDate()"
+                      #start_Date_Sprint="ngbDatepicker"
+                    />
+                    <button
+                      class="btn btn-outline-secondary calendar"
+                      (click)="start_Date_Sprint.toggle()"
+                      type="button"
+                    ></button>
+                  </div>
+                  <div class="col-md-6">
+                    <em
+                      *ngIf="
+                        validateControlSprint('start_Date_Sprint') &&
+                        hasErrorSprint('start_Date_Sprint', 'required')
+                      "
+                      >Start date is required</em
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="end_Date_Sprint">End date</label>
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      placeholder="yyyy-mm-dd"
+                      formControlName="end_Date_Sprint"
+                      name="end_Date_Sprint"
+                      [(ngModel)]="modelEndDate"
+                      ngbDatepicker
+                      (dateSelect)="convertEndDate()"
+                      #end_Date_Sprint="ngbDatepicker"
+                    />
+                    <button
+                      class="btn btn-outline-secondary calendar"
+                      (click)="end_Date_Sprint.toggle()"
+                      type="button"
+                    ></button>
+                  </div>
+                  <div class="col-md-6">
+                    <em
+                      *ngIf="
+                        validateControlSprint('end_Date_Sprint') &&
+                        hasErrorSprint('end_Date_Sprint', 'required')
+                      "
+                      >End date is required</em
+                    >
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-dark"
+                    [disabled]="!sprintForm.valid"
+                    (click)="modal.close('Save click')"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </ng-template>
+          <button
+            class="button1"
+            mat-raised-button
+            (click)="getDbUsersByProjectId(project.project_Id); open(content2)"
+          >
+            Contribuitors
+          </button>
+
+          <ng-template #content2 let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">
+                Users working on this project
+              </h4>
+
+              <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <mat-list role="list" *ngFor="let user of usersWorkingOnAProject">
+                <mat-list-item role="listitem">{{
+                  user.username
+                }}</mat-list-item>
+              </mat-list>
+            </div>
+          </ng-template>
+
+          <button
+            mat-raised-button
+            (click)="deleteProjectById(project.project_Id)"
+            color="warn"
+          >
+            Delete
+          </button>
+          <button
+            mat-raised-button
+            (click)="disenrollUser(this.userId, project.project_Id)"
+            color="warn"
+          >
+            Stop contributing
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div>
+  <!-- <ul>
+  <li *ngFor="let task of tasks">
+    {{ task.task_Name }}
+  </li>
+</ul> -->
+
+  <!-- <input #code class="form-control" />
+<a href="#" class="btn-btn-primary" (click)="getByCode(code.value)">Get Task</a>
+<span> {{ task.name }}</span> -->
+</div>

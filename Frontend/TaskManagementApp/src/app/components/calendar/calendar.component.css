@@ -1,0 +1,38 @@
+.layout {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  flex-direction: row;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.right-content {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+
+.content {
+  flex: auto;
+  height: 100%;
+}
+
+.left {
+  float: left;
+  margin-left: 0px;
+}
+
+.right {
+  float: right;
+  margin-right: 20px;
+}
+
+.top {
+  float: top;
+  margin-top: 20px;
+}

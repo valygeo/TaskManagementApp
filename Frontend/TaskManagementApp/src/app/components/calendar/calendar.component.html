@@ -1,0 +1,28 @@
+<!-- <div class="row box">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-curent="page">Events</li>
+        </ol>
+    </nav>
+
+    <div class="col-md-5 mt-3">
+            <h1 class="text-muted mb-6 text-center">View events in clendar mode</h1>
+            <hr>
+            <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+</div> -->
+
+<div class="layout" fxLayout="row">
+  <app-menu></app-menu>
+  <div class="right-content" fxLayout="column">
+    <app-header></app-header>
+    <div class="content" class="center">
+      <div class="col-md-5 mt-3">
+        <div>
+          <full-calendar [options]="calendarOptions"></full-calendar>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e02331d5-23d2-45f1-b3ce-92af92707e47": {
+      "ProjectGuid": "e02331d5-23d2-45f1-b3ce-92af92707e47",
+      "DisplayName": "TaskManagementApp",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "3d457d24-5769-40a5-b184-2adc79af3c8d": {
+      "ProjectGuid": "3d457d24-5769-40a5-b184-2adc79af3c8d",
+      "DisplayName": "UserService",
+      "ColorIndex": 1
+    },
+    "1b512629-3f1b-4bf8-83ce-18b59a0918dc": {
+      "ProjectGuid": "1b512629-3f1b-4bf8-83ce-18b59a0918dc",
+      "DisplayName": "CommonService",
+      "ColorIndex": 2
+    },
+    "3d3d6b6d-a6ae-413d-85e3-488a35bd8f85": {
+      "ProjectGuid": "3d3d6b6d-a6ae-413d-85e3-488a35bd8f85",
+      "DisplayName": "CommonServices",
+      "ColorIndex": 3
+    },
+    "bde83b75-bd73-4473-ac19-b9b47ebb4843": {
+      "ProjectGuid": "bde83b75-bd73-4473-ac19-b9b47ebb4843",
+      "DisplayName": "Tasks",
+      "ColorIndex": 4
+    },
+    "707fc941-1ceb-4a47-9225-c410de83d9bd": {
+      "ProjectGuid": "707fc941-1ceb-4a47-9225-c410de83d9bd",
+      "DisplayName": "TasksServices",
+      "ColorIndex": 5
+    },
+    "c94c411f-5510-42a2-9a71-52b2502a0456": {
+      "ProjectGuid": "c94c411f-5510-42a2-9a71-52b2502a0456",
+      "DisplayName": "SprintServices",
+      "ColorIndex": 6
+    },
+    "74f5b70f-7eda-4f53-9ff1-0193c61171e2": {
+      "ProjectGuid": "74f5b70f-7eda-4f53-9ff1-0193c61171e2",
+      "DisplayName": "SprintAPI",
+      "ColorIndex": 7
+    },
+    "ff0acc3b-d057-4fb5-8e08-0e71613a4de8": {
+      "ProjectGuid": "ff0acc3b-d057-4fb5-8e08-0e71613a4de8",
+      "DisplayName": "ProjectAPI",
+      "ColorIndex": 8
+    },
+    "7076f717-a2f2-42cd-bcfb-615e63516fc9": {
+      "ProjectGuid": "7076f717-a2f2-42cd-bcfb-615e63516fc9",
+      "DisplayName": "ProjectServices",
+      "ColorIndex": 9
+    },
+    "0b990a05-4c12-4976-bcfa-e6021b340c3e": {
+      "ProjectGuid": "0b990a05-4c12-4976-bcfa-e6021b340c3e",
+      "DisplayName": "TasksServices",
+      "ColorIndex": 10
+    },
+    "684d68ad-d605-4387-9123-188471a434fd": {
+      "ProjectGuid": "684d68ad-d605-4387-9123-188471a434fd",
+      "DisplayName": "TaskAPI",
+      "ColorIndex": 11
+    },
+    "4e9431ef-fb87-4211-8145-f5f7cf07be63": {
+      "ProjectGuid": "4e9431ef-fb87-4211-8145-f5f7cf07be63",
+      "DisplayName": "PbiAPI",
+      "ColorIndex": 12
+    },
+    "1fed9572-1de1-4682-b7fc-a05fe8896c0b": {
+      "ProjectGuid": "1fed9572-1de1-4682-b7fc-a05fe8896c0b",
+      "DisplayName": "PbiServices",
+      "ColorIndex": 13
+    },
+    "7857a2ec-5bc6-43e8-b6d5-004ce6806bec": {
+      "ProjectGuid": "7857a2ec-5bc6-43e8-b6d5-004ce6806bec",
+      "DisplayName": "AssignmentAPI",
+      "ColorIndex": 14
+    },
+    "831f7605-00e2-45c3-8e89-68b2fdefd7dd": {
+      "ProjectGuid": "831f7605-00e2-45c3-8e89-68b2fdefd7dd",
+      "DisplayName": "AssignmentServices",
+      "ColorIndex": 15
+    }
+  },
+  "NextColorIndex": 0
+}

@@ -1,0 +1,10 @@
+.body-login {
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    #e0f5ff 0%,
+    #e0f5ff 50%,
+    white 50%,
+    white 100%
+  );
+}

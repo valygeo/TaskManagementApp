@@ -1,0 +1,98 @@
+<div class="mat-d">
+  <div class="card-body">
+    <h1 class="title" style="font-family: 'Times New Roman', Times, serif">
+      Login
+    </h1>
+    <div *ngIf="showError" class="alert alert-danger" role="alert">
+      {{ errorMessage }}
+    </div>
+    <form
+      [formGroup]="loginForm"
+      autocomplete="off"
+      novalidate
+      (ngSubmit)="loginUser(loginForm.value)"
+    >
+      <div class="mb-3 row">
+        <label for="username" class="col-form-label col-sm-3">Username</label>
+        <div class="col-md-6">
+          <input
+            style="font-style: oblique"
+            placeholder="Enter your username"
+            type="text"
+            id="username"
+            formControlName="username"
+            class="form-control"
+          />
+        </div>
+        <div class="col-md-6">
+          <em
+            *ngIf="
+              validateControl('username') && hasError('username', 'required')
+            "
+            >Username is required</em
+          >
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="email" class="col-form-label col-sm-3">Email</label>
+        <div class="col-md-6">
+          <input
+            style="font-style: oblique"
+            placeholder="Enter your email"
+            type="text"
+            id="email"
+            formControlName="email"
+            class="form-control"
+          />
+        </div>
+        <div class="col-md-6">
+          <em *ngIf="validateControl('email') && hasError('email', 'required')"
+            >Email is required</em
+          >
+        </div>
+        <div class="col-md-6">
+          <em *ngIf="validateControl('email') && hasError('email', 'email')"
+            >Please provide a valid email!
+          </em>
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="password" class="col-form-label col-sm-3">Password</label>
+        <div class="col-md-6">
+          <input
+            style="font-style: oblique"
+            placeholder="Enter your password"
+            type="password"
+            id="password"
+            formControlName="password"
+            class="form-control"
+          />
+        </div>
+
+        <div class="col-md-6">
+          <em
+            *ngIf="
+              validateControl('password') && hasError('password', 'required')
+            "
+            >Password is required</em
+          >
+        </div>
+      </div>
+      <br />
+      <div class="mb-3 row">
+        <div class="button-form">
+          <button
+            type="submit"
+            class="btn btn-info btn-lg"
+            [disabled]="!loginForm.valid"
+          >
+            Login
+          </button>
+        </div>
+        <a routerLink="/register-main">New user?Click here for signup!</a>
+      </div>
+    </form>
+  </div>
+</div>

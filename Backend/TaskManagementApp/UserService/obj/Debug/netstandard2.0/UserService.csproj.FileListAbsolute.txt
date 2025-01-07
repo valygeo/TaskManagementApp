@@ -1,0 +1,13 @@
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\bin\Debug\netstandard2.0\UserService.deps.json
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\bin\Debug\netstandard2.0\UserService.dll
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\bin\Debug\netstandard2.0\UserService.pdb
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\bin\Debug\netstandard2.0\CommonService.dll
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\bin\Debug\netstandard2.0\CommonService.pdb
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\obj\Debug\netstandard2.0\UserService.csproj.AssemblyReference.cache
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\obj\Debug\netstandard2.0\UserService.GeneratedMSBuildEditorConfig.editorconfig
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\obj\Debug\netstandard2.0\UserService.AssemblyInfoInputs.cache
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\obj\Debug\netstandard2.0\UserService.AssemblyInfo.cs
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\obj\Debug\netstandard2.0\UserService.csproj.CoreCompileInputs.cache
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\obj\Debug\netstandard2.0\UserService.csproj.CopyComplete
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\obj\Debug\netstandard2.0\UserService.dll
+E:\PracticaSiemens\Backend\TaskManagementApp\UserService\obj\Debug\netstandard2.0\UserService.pdb

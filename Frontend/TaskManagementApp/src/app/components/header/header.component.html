@@ -1,0 +1,19 @@
+<mat-toolbar class="mat-toolbar">
+  <span><mat-icon>eco</mat-icon>Task manager</span>
+  <div class="spacer"></div>
+  <mat-card class="card">Hello {{ this.user }}!</mat-card>
+  <!-- <button
+    routerLink="/login-main"
+    routerlinkActive="active"
+    class="btn btn-danger mx-2"
+  >
+    Logout
+  </button> -->
+  <button
+    *ngIf="authenticationService.loggedIn()"
+    class="btn btn-danger mx-2"
+    (click)="authenticationService.logoutUser()"
+  >
+    Logout
+  </button>
+</mat-toolbar>

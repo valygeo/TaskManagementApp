@@ -1,0 +1,55 @@
+em {
+  color: #e71515;
+  font-weight: bold;
+}
+.ng-invalid.ng-touched {
+  border-color: red;
+}
+.title {
+  top: 15%;
+  bottom: 77.5%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  color: #000000;
+}
+
+/* .card{
+    margin-top: 10px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px #cabcbc;
+    
+} */
+/* .mat-card {
+  max-width: 600px;
+  margin: 2em auto;
+  text-align: center;
+  max-height: 500px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.mat-d {
+  width: 450px;
+  border-radius: 10px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  right: 150px;
+  bottom: 50px;
+  background: #e1e1fe;
+}
+.button-form {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}

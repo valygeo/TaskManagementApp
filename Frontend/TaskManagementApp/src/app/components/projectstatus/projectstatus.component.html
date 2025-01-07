@@ -1,0 +1,22 @@
+<!-- <mat-list dense role="list">
+  <cdk-virtual-scroll-viewport [itemSize]="100" class="example-viewport">
+    <mat-list-item
+      *cdkVirtualFor="let item of list; let odd = odd"
+      [class.example-alternate]="odd"
+      role="listitem"
+    >
+      {{ item }}
+    </mat-list-item>
+  </cdk-virtual-scroll-viewport>
+</mat-list> -->
+
+<div class="virtual-scrolling">
+  <h3>Virtual</h3>
+  <mat-list class="scrolling-container mat-elevation-z7">
+    <cdk-virtual-scroll-viewport itemSize="48" class="scrolling-container">
+      <mat-list-item *cdkVirtualFor="let item of list">{{
+        item
+      }}</mat-list-item>
+    </cdk-virtual-scroll-viewport>
+  </mat-list>
+</div>

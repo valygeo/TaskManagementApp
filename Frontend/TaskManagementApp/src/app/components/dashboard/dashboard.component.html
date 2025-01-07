@@ -1,0 +1,1046 @@
+<div class="layout" fxLayout="row">
+  <app-menu></app-menu>
+  <div class="right-content" fxLayout="column">
+    <app-header></app-header>
+
+    <div class="content">
+      <div class="container">
+        <div>
+          <h2 class="search-input">
+            <mat-icon class="mat-icon1">search</mat-icon>
+
+            <mat-form-field>
+              <input
+                type="tel"
+                matInput
+                placeholder="Find a pbi"
+                [(ngModel)]="pbiName"
+              />
+            </mat-form-field>
+          </h2>
+          <h2 class="alignAddButton">
+            <button
+              mat-raised-button
+              class="mat-raised-button1"
+              (click)="open(content)"
+            >
+              Add pbi
+            </button>
+          </h2>
+
+          <ng-template #content let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">New Pbi</h4>
+              <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <!-- <form
+                  [formGroup]="pbiForm"
+                  (ngSubmit)="
+                    addPbi(pbiForm.value)
+                  "
+                > -->
+              <form [formGroup]="pbiForm" (ngSubmit)="addPbi(pbiForm.value)">
+                <div class="form-group">
+                  <label for="pbi_Name">Pbi name</label>
+                  <div class="input-group">
+                    <input
+                      name="pbi_Name"
+                      type="text"
+                      id="pbi_Name"
+                      formControlName="pbi_Name"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <em
+                      *ngIf="
+                        validateControl('pbi_Name') &&
+                        hasError('pbi_Name', 'required')
+                      "
+                      >Name is required</em
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="pbi_Description">Pbi description</label>
+                  <div class="input-group">
+                    <input
+                      name="pbi_Description"
+                      id="pbi_Description"
+                      type="text"
+                      class="form-control"
+                      formControlName="pbi_Description"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <em
+                      *ngIf="
+                        validateControl('pbi_Description') &&
+                        hasError('pbi_Description', 'required')
+                      "
+                      >Description is required</em
+                    >
+                  </div>
+                </div>
+                <!-- <div class="form-group">
+                  <label for="pbi_Type">Pbi Type</label>
+                  <mat-select formControlName="pbi_Type" required>
+                    <mat-option>--</mat-option>
+                    <mat-option value="Bug">Bug</mat-option>
+                    <mat-option value="Feature">Feature</mat-option>
+                  </mat-select>
+                  <div class="input-group">
+                    <input
+                      name="pbi_Type"
+                      id="pbi_Type"
+                      type="text"
+                      class="form-control"
+                      formControlName="pbi_Type"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <em
+                      *ngIf="
+                        validateControl('pbi_Type') &&
+                        hasError('pbi_Type', 'required')
+                      "
+                      >Type is required</em
+                    >
+                  </div>
+                </div> -->
+
+                <div class="form-group">
+                  <label for="pbi_type">Pbi Type </label>
+                  <div class="input-group">
+                    <mat-select
+                      class="form-control"
+                      name="pbi_type"
+                      formControlName="pbi_type"
+                      #pbi_type
+                      (selectionChange)="changeClient($event.value)"
+                    >
+                      <mat-option [value]="0">Bug</mat-option>
+                      <mat-option [value]="1">Feature</mat-option>
+                    </mat-select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <em
+                    *ngIf="
+                      validateControl('pbi_type') &&
+                      hasError('pbi_type', 'required')
+                    "
+                    >Type is required</em
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="sprint_Id">Pbi Sprint </label>
+                  <div class="input-group">
+                    <mat-select
+                      class="form-control"
+                      name="sprint_Id"
+                      formControlName="sprint_Id"
+                      #sprint_Id
+                      (selectionChange)="changeClient($event.value)"
+                    >
+                      <mat-option
+                        *ngFor="let sprint of sprint"
+                        [value]="sprint.sprint_Id"
+                      >
+                        {{ sprint.sprint_Name }}
+                      </mat-option>
+                    </mat-select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <em
+                    *ngIf="
+                      validateControl('sprint_Id') &&
+                      hasError('sprint_Id', 'required')
+                    "
+                    >Choose a sprint!</em
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="start_Date_Pbi">Start date</label>
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      placeholder="yyyy-mm-dd"
+                      name="start_Date_Pbi"
+                      formControlName="start_Date_Pbi"
+                      [(ngModel)]="modelStartDate"
+                      ngbDatepicker
+                      (dateSelect)="convertStartDate()"
+                      #start_Date_Pbi="ngbDatepicker"
+                    />
+                    <button
+                      class="btn btn-outline-secondary calendar"
+                      (click)="start_Date_Pbi.toggle()"
+                      type="button"
+                    ></button>
+                  </div>
+                  <div class="col-md-6">
+                    <em
+                      *ngIf="
+                        validateControl('start_Date_Pbi') &&
+                        hasError('start_Date_Pbi', 'required')
+                      "
+                      >Start date is required</em
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="end_Date_Pbi">End date</label>
+                  <div class="input-group">
+                    <input
+                      class="form-control"
+                      placeholder="yyyy-mm-dd"
+                      formControlName="end_Date_Pbi"
+                      name="end_Date_Pbi"
+                      [(ngModel)]="modelEndDate"
+                      ngbDatepicker
+                      (dateSelect)="convertEndDate()"
+                      #end_Date_Pbi="ngbDatepicker"
+                    />
+                    <button
+                      class="btn btn-outline-secondary calendar"
+                      (click)="end_Date_Pbi.toggle()"
+                      type="button"
+                    ></button>
+                  </div>
+                  <div class="col-md-6">
+                    <em
+                      *ngIf="
+                        validateControl('end_Date_Pbi') &&
+                        hasError('end_Date_Pbi', 'required')
+                      "
+                      >End date is required</em
+                    >
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-dark"
+                    [disabled]="!pbiForm.valid"
+                    (click)="modal.close('Save click')"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </ng-template>
+        </div>
+        <mat-card
+          class="example-card"
+          *ngFor="let pbi of bugs | filter: pbiName"
+        >
+          <mat-card-header>
+            <mat-card-title>{{ pbi.pbi_Name }}</mat-card-title>
+            <mat-card-subtitle>{{ pbi.pbi_Description }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content class="text"
+            >Start date: {{ pbi.start_Date_Pbi | date: "mediumDate" }}
+          </mat-card-content>
+          <mat-card-content class="text"
+            >End date:
+            {{ pbi.end_Date_Pbi | date: "mediumDate" }}</mat-card-content
+          >
+
+          <mat-card-actions>
+            <button
+              mat-raised-button
+              (click)="open(content2); getDbUsersByProjectId(projectId)"
+            >
+              Edit
+            </button>
+            <ng-template #content2 let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Edit pbi</h4>
+                <button
+                  type="button"
+                  class="close"
+                  aria-label="Close"
+                  (click)="modal.dismiss('Cross click')"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form
+                  [formGroup]="editPbi"
+                  (ngSubmit)="updateDbPbi(pbi.pbi_Id, editPbi.value)"
+                >
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="pbi_Name">Pbi name</label>
+                      <div class="input-group">
+                        <input
+                          name="pbi_Name"
+                          type="text"
+                          id="pbi_Name"
+                          formControlName="pbi_Name"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="pbi_Description">Pbi description</label>
+                      <div class="input-group">
+                        <input
+                          name="pbi_Description"
+                          id="pbi_Description"
+                          type="text"
+                          class="form-control"
+                          formControlName="pbi_Description"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="start_Date_Pbi">Start date</label>
+
+                      <div class="input-group">
+                        <input
+                          class="form-control"
+                          placeholder="yyyy-mm-dd"
+                          name="start_Date_Pbi"
+                          formControlName="start_Date_Pbi"
+                          [(ngModel)]="modelStartDate"
+                          ngbDatepicker
+                          (dateSelect)="convertStartDate()"
+                          #start_Date_Pbi="ngbDatepicker"
+                        />
+
+                        <button
+                          class="btn btn-outline-secondary calendar"
+                          (click)="start_Date_Pbi.toggle()"
+                          type="button"
+                        ></button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="end_Date_Pbi">End date</label>
+                      <div class="input-group">
+                        <div class="input-group">
+                          <input
+                            class="form-control"
+                            placeholder="yyyy-mm-dd"
+                            formControlName="end_Date_Pbi"
+                            name="end_Date_Pbi"
+                            [(ngModel)]="modelEndDate"
+                            ngbDatepicker
+                            (dateSelect)="convertEndDate()"
+                            #end_Date_Pbi="ngbDatepicker"
+                          />
+
+                          <button
+                            class="btn btn-outline-secondary calendar"
+                            (click)="end_Date_Pbi.toggle()"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="id">Pbi User </label>
+                      <div class="input-group">
+                        <mat-select
+                          class="form-control"
+                          name="id"
+                          formControlName="id"
+                          #id
+                          (selectionChange)="changeClient($event.value)"
+                        >
+                          <mat-option
+                            *ngFor="let user of usersWorkingOnAProject"
+                            [value]="user.id"
+                          >
+                            {{ user.username }}
+                          </mat-option>
+                        </mat-select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="sprint_Id">Pbi Sprint </label>
+                      <div class="input-group">
+                        <mat-select
+                          class="form-control"
+                          name="sprint_Id"
+                          formControlName="sprint_Id"
+                          #sprint_Id
+                          (selectionChange)="changeClient($event.value)"
+                        >
+                          <mat-option
+                            *ngFor="let sprint of sprint"
+                            [value]="sprint.sprint_Id"
+                          >
+                            {{ sprint.sprint_Name }}
+                          </mat-option>
+                        </mat-select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="pbi_type">Pbi Type </label>
+                      <div class="input-group">
+                        <mat-select
+                          class="form-control"
+                          name="pbi_type"
+                          formControlName="pbi_type"
+                          #Type
+                          (selectionChange)="changeClient($event.value)"
+                        >
+                          <mat-option [value]="0">Bug</mat-option>
+                          <mat-option [value]="1">Feature</mat-option>
+                        </mat-select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button
+                      type="submit"
+                      class="btn btn-outline-dark"
+                      (click)="modal.close('Save click')"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </ng-template>
+
+            <button
+              mat-raised-button
+              (click)="
+                getTasksByUserIdPbiId(this.userByUsername.id, pbi.pbi_Id)
+              "
+            >
+              Tasks
+            </button>
+            <button
+              mat-raised-button
+              (click)="
+                getSprintDetails(pbi.sprint_Id);
+                open(content5);
+                getProjectById(sprintById.project_Id)
+              "
+            >
+              Details
+            </button>
+            <ng-template #content5 let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">
+                  Sprint details
+                </h4>
+
+                <button
+                  type="button"
+                  class="close"
+                  aria-label="Close"
+                  (click)="modal.dismiss('Cross click')"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <h1 class="sprintInfoText">
+                Name : {{ sprintById.sprint_Name }}
+              </h1>
+              <h2 class="sprintInfoText">
+                Description : {{ sprintById.sprint_Description }}
+              </h2>
+              <h3 class="sprintInfoText">
+                Start date :
+                {{ sprintById.start_Date_Sprint | date: "mediumDate" }}
+              </h3>
+              <h4 class="sprintInfoText">
+                End date : {{ sprintById.end_Date_Sprint | date: "mediumDate" }}
+              </h4>
+            </ng-template>
+
+            <button
+              mat-raised-button
+              class="mat-raised-button2"
+              (click)="deletePbiById(pbi.pbi_Id)"
+              color="warn"
+            >
+              Delete
+            </button>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card
+          class="example-card-feature"
+          *ngFor="let pbi of features | filter: pbiName"
+        >
+          <mat-card-header>
+            <mat-card-title>{{ pbi.pbi_Name }} </mat-card-title>
+
+            <mat-card-subtitle>{{ pbi.pbi_Description }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content class="text"
+            >Start date: {{ pbi.start_Date_Pbi | date: "mediumDate" }}
+          </mat-card-content>
+          <mat-card-content class="text"
+            >End date:
+            {{ pbi.end_Date_Pbi | date: "mediumDate" }}</mat-card-content
+          >
+
+          <!-- <mat-card-content class="text"
+         *ngIf="pbi.pbi_type=='0'; else elseBlock">Status:'Bug'
+        <ng-template #elseBlock>Content to render when condition is false.</ng-template>
+          >Status: {{ pbi.pbi_type }}</mat-card-content
+        > -->
+
+          <mat-card-actions>
+            <button
+              mat-raised-button
+              (click)="open(content2); getDbUsersByProjectId(projectId)"
+            >
+              Edit
+            </button>
+            <ng-template #content2 let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Edit pbi</h4>
+                <button
+                  type="button"
+                  class="close"
+                  aria-label="Close"
+                  (click)="modal.dismiss('Cross click')"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form
+                  [formGroup]="editPbi"
+                  (ngSubmit)="updateDbPbi(pbi.pbi_Id, editPbi.value)"
+                >
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="pbi_Name">Pbi name</label>
+                      <div class="input-group">
+                        <input
+                          name="pbi_Name"
+                          type="text"
+                          id="pbi_Name"
+                          formControlName="pbi_Name"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="pbi_Description">Pbi description</label>
+                      <div class="input-group">
+                        <input
+                          name="pbi_Description"
+                          id="pbi_Description"
+                          type="text"
+                          class="form-control"
+                          formControlName="pbi_Description"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="start_Date_Pbi">Start date</label>
+
+                      <div class="input-group">
+                        <input
+                          class="form-control"
+                          placeholder="yyyy-mm-dd"
+                          name="start_Date_Pbi"
+                          formControlName="start_Date_Pbi"
+                          [(ngModel)]="modelStartDate"
+                          ngbDatepicker
+                          (dateSelect)="convertStartDate()"
+                          #start_Date_Pbi="ngbDatepicker"
+                        />
+
+                        <button
+                          class="btn btn-outline-secondary calendar"
+                          (click)="start_Date_Pbi.toggle()"
+                          type="button"
+                        ></button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="end_Date_Pbi">End date</label>
+                      <div class="input-group">
+                        <div class="input-group">
+                          <input
+                            class="form-control"
+                            placeholder="yyyy-mm-dd"
+                            formControlName="end_Date_Pbi"
+                            name="end_Date_Pbi"
+                            [(ngModel)]="modelEndDate"
+                            ngbDatepicker
+                            (dateSelect)="convertEndDate()"
+                            #end_Date_Pbi="ngbDatepicker"
+                          />
+
+                          <button
+                            class="btn btn-outline-secondary calendar"
+                            (click)="end_Date_Pbi.toggle()"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="sprint_Id">Pbi Sprint </label>
+                      <div class="input-group">
+                        <mat-select
+                          class="form-control"
+                          name="sprint_Id"
+                          formControlName="sprint_Id"
+                          #sprint_Id
+                          (selectionChange)="changeClient($event.value)"
+                        >
+                          <mat-option
+                            *ngFor="let sprint of sprint"
+                            [value]="sprint.sprint_Id"
+                          >
+                            {{ sprint.sprint_Name }}
+                          </mat-option>
+                        </mat-select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="id">Pbi User </label>
+                      <div class="input-group">
+                        <mat-select
+                          class="form-control"
+                          name="id"
+                          formControlName="id"
+                          #id
+                          (selectionChange)="changeClient($event.value)"
+                        >
+                          <mat-option
+                            *ngFor="let user of usersWorkingOnAProject"
+                            [value]="user.id"
+                          >
+                            {{ user.username }}
+                          </mat-option>
+                        </mat-select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="pbi_type">Pbi Type </label>
+                      <div class="input-group">
+                        <mat-select
+                          class="form-control"
+                          name="pbi_type"
+                          formControlName="pbi_type"
+                          #Type
+                          (selectionChange)="changeClient($event.value)"
+                        >
+                          <mat-option [value]="0">Bug</mat-option>
+                          <mat-option [value]="1">Feature</mat-option>
+                        </mat-select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button
+                      type="submit"
+                      class="btn btn-outline-dark"
+                      (click)="modal.close('Save click')"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </ng-template>
+
+            <button
+              mat-raised-button
+              (click)="
+                getTasksByUserIdPbiId(this.userByUsername.id, pbi.pbi_Id)
+              "
+            >
+              Tasks
+            </button>
+            <button
+              mat-raised-button
+              (click)="
+                getSprintDetails(pbi.sprint_Id);
+                open(content5);
+                getProjectById(sprintById.project_Id)
+              "
+            >
+              Details
+            </button>
+            <ng-template #content5 let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">
+                  Sprint details
+                </h4>
+
+                <button
+                  type="button"
+                  class="close"
+                  aria-label="Close"
+                  (click)="modal.dismiss('Cross click')"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <h1 class="sprintInfoText">
+                Name : {{ sprintById.sprint_Name }}
+              </h1>
+              <h2 class="sprintInfoText">
+                Description : {{ sprintById.sprint_Description }}
+              </h2>
+              <h3 class="sprintInfoText">
+                Start date :
+                {{ sprintById.start_Date_Sprint | date: "mediumDate" }}
+              </h3>
+              <h4 class="sprintInfoText">
+                End date : {{ sprintById.end_Date_Sprint | date: "mediumDate" }}
+              </h4>
+            </ng-template>
+
+            <button
+              mat-raised-button
+              class="mat-raised-button2"
+              (click)="deletePbiById(pbi.pbi_Id)"
+              color="warn"
+            >
+              Delete
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="example-container">
+      <div
+        cdkDropList
+        #todoList="cdkDropList"
+        [cdkDropListData]="todo"
+        [cdkDropListConnectedTo]="[doneList, progressList]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <mat-icon (click)="open(content3)">add</mat-icon>
+        <h1 class="content-text-2">To do</h1>
+        <div class="example-box" *ngFor="let task of todo" cdkDrag>
+          <mat-icon
+            (click)="
+              getTaskById(task.task_Id);
+              open(content4);
+              userWorkingOnATask(task.id);
+              getPbiById(task.pbi_Id)
+            "
+            >reorder
+          </mat-icon>
+
+          {{ task.task_Name }}
+          <mat-icon (click)="deleteTask(task.task_Id)" class="mat-icon-2"
+            >delete</mat-icon
+          >
+        </div>
+        <ng-template #content4 let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Task information</h4>
+
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              (click)="modal.dismiss('Cross click')"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>Name : {{ taskById.task_Name }}</h1>
+            <h2>Description : {{ taskById.task_Description }}</h2>
+            <h3>Owner : {{ userWorking.username }}</h3>
+            <h4>Pbi : {{ pbiName }}</h4>
+            <h5>Status : {{ taskById.task_Status }}</h5>
+          </div>
+          <div class="modal-footer">
+            <button
+              mat-raised-button
+              type="submit"
+              (click)="open(content6)"
+              btn
+              btn-outline-dark
+            >
+              Edit
+            </button>
+          </div>
+          <ng-template #content6 let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Edit Task</h4>
+              <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="modal.dismiss('Cross click')"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form
+                [formGroup]="editTask"
+                (ngSubmit)="editDbTask(taskById.task_Id, editTask.value)"
+              >
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="task_Name">Task name</label>
+                    <div class="input-group">
+                      <input
+                        name="task_Name"
+                        type="text"
+                        id="task_Name"
+                        formControlName="task_Name"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="task_Description">Task description</label>
+                    <div class="input-group">
+                      <input
+                        name="task_Description"
+                        id="task_Description"
+                        type="text"
+                        class="form-control"
+                        formControlName="task_Description"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="task_Status">Status</label>
+                    <mat-select
+                      class="form-control"
+                      name="task_Status"
+                      formControlName="task_Status"
+                      #task_Status
+                    >
+                      <mat-option value="To do">To do</mat-option>
+                      <mat-option value="In progress">In progress</mat-option>
+                      <mat-option value="Done">Done</mat-option>
+                    </mat-select>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button
+                    type="submit"
+                    class="btn btn-outline-dark"
+                    (click)="modal.close('Save click')"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </ng-template>
+        </ng-template>
+        <ng-template #content3 let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">New Task</h4>
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              (click)="modal.dismiss('Cross click')"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <!-- <form
+                [formGroup]="pbiForm"
+                (ngSubmit)="
+                  addPbi(pbiForm.value)
+                "
+              > -->
+            <form [formGroup]="taskForm" (ngSubmit)="addTask(taskForm.value)">
+              <div class="form-group">
+                <label for="task_Name">Task name</label>
+                <div class="input-group">
+                  <input
+                    name="pbi_Name"
+                    type="text"
+                    id="task_Name"
+                    formControlName="task_Name"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <em
+                    *ngIf="
+                      validateControlTask('task_Name') &&
+                      hasErrorTask('task_Name', 'required')
+                    "
+                    >Name is required</em
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="task_Description">Task description</label>
+                <div class="input-group">
+                  <input
+                    name="task_Description"
+                    id="pbi_Description"
+                    type="text"
+                    class="form-control"
+                    formControlName="task_Description"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <em
+                    *ngIf="
+                      validateControlTask('task_Description') &&
+                      hasErrorTask('task_Description', 'required')
+                    "
+                    >Description is required</em
+                  >
+                </div>
+              </div>
+              <!-- <div class="form-group">
+                <label for="pbi_Type">Pbi Type</label>
+                <mat-select formControlName="pbi_Type" required>
+                  <mat-option>--</mat-option>
+                  <mat-option value="Bug">Bug</mat-option>
+                  <mat-option value="Feature">Feature</mat-option>
+                </mat-select>
+                <div class="input-group">
+                  <input
+                    name="pbi_Type"
+                    id="pbi_Type"
+                    type="text"
+                    class="form-control"
+                    formControlName="pbi_Type"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <em
+                    *ngIf="
+                      validateControl('pbi_Type') &&
+                      hasError('pbi_Type', 'required')
+                    "
+                    >Type is required</em
+                  >
+                </div>
+              </div> -->
+
+              <div class="form-group">
+                <label for="pbi_Id">Pbi </label>
+                <div class="input-group">
+                  <mat-select
+                    class="form-control"
+                    name="pbi_Id"
+                    formControlName="pbi_Id"
+                    #pbi_Id
+                    (selectionChange)="changeClient($event.value)"
+                  >
+                    <mat-option *ngFor="let pbi of pbi" [value]="pbi.pbi_Id">
+                      {{ pbi.pbi_Name }}
+                    </mat-option>
+                  </mat-select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <em
+                  *ngIf="
+                    validateControlTask('pbi_Id') &&
+                    hasErrorTask('pbi_Id', 'required')
+                  "
+                  >Choose a pbi!</em
+                >
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  type="submit"
+                  class="btn btn-outline-dark"
+                  [disabled]="!taskForm.valid"
+                  (click)="modal.close('Save click')"
+                >
+                  Save
+                </button>
+              </div>
+            </form>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <div class="example-container">
+    <div
+      cdkDropList
+      #progressList="cdkDropList"
+      [cdkDropListData]="progress"
+      [cdkDropListConnectedTo]="[todoList, doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <h2 class="content-text">In progress</h2>
+
+      <div class="example-box" *ngFor="let task of progress" cdkDrag>
+        <mat-icon
+          (click)="
+            getTaskById(task.task_Id);
+            open(content4);
+            userWorkingOnATask(task.id)
+          "
+          >reorder</mat-icon
+        >
+        {{ task.task_Name }}
+        <mat-icon class="mat-icon-2" (click)="deleteTask(task.task_Id)"
+          >delete</mat-icon
+        >
+      </div>
+    </div>
+  </div>
+  <div class="example-container">
+    <div
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[todoList, progressList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <mat-icon>done</mat-icon>
+      <h2 class="content-text-2">Done</h2>
+      <div class="example-box" *ngFor="let task of done" cdkDrag>
+        <mat-icon
+          (click)="
+            getTaskById(task.task_Id);
+            open(content4);
+            userWorkingOnATask(task.id)
+          "
+          >reorder</mat-icon
+        >
+
+        {{ task.task_Name }}
+        <mat-icon (click)="deleteTask(task.task_Id)" class="mat-icon-2"
+          >delete</mat-icon
+        >
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.header-content {
+  position: absolute;
+  width: 720px;
+  height: 1069px;
+  left: 0px;
+  top: 0px;
+  border-radius: 12px;
+}
+
+.photo {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  bottom: 50px;
+}
+.icon {
+  width: 75px;
+  height: 75px;
+}
+.title {
+  margin-left: 170px;
+  font-size: 10mm;
+}
+.logo {
+  font-size: 7mm;
+  margin-left: 200px;
+  margin-top: 10px;
+}

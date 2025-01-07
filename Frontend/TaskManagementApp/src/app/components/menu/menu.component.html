@@ -1,0 +1,157 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened></mat-sidenav>
+  <mat-sidenav-content>
+    <a mat-raised-button routerLink="/board"><mat-icon>home</mat-icon> Home </a>
+    <a mat-raised-button class="button" routerLink="/board"><mat-icon>grade</mat-icon> Your projects </a>
+
+    <a mat-raised-button class="button" routerLink="/projects-view"><mat-icon>explore</mat-icon> All projects</a>
+
+    <a mat-raised-button class="button" routerLink="/calendar"><mat-icon>today</mat-icon> Calendar </a>
+    <a mat-raised-button class="button" (click)="open(content)"><mat-icon>add</mat-icon> Add project </a>
+
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">New Project</h4>
+        <button
+          type="button"
+          class="close"
+          aria-label="Close"
+          (click)="modal.dismiss('Cross click')"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form
+          [formGroup]="projectForm"
+          (ngSubmit)="
+            addProjectDbWithAssignment(currentUserId, projectForm.value)
+          "
+        >
+          <div class="form-group">
+            <label for="project_Name">Project name</label>
+            <div class="input-group">
+              <input
+                name="project_Name"
+                type="text"
+                id="project_Name"
+                formControlName="project_Name"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-6">
+              <em
+                *ngIf="
+                  validateControl('project_Name') &&
+                  hasError('project_Name', 'required')
+                "
+                >Name is required</em
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="project_Description">Project description</label>
+            <div class="input-group">
+              <input
+                name="project_Description"
+                id="project_Description"
+                type="text"
+                class="form-control"
+                formControlName="project_Description"
+              />
+            </div>
+            <div class="col-md-6">
+              <em
+                *ngIf="
+                  validateControl('project_Description') &&
+                  hasError('project_Description', 'required')
+                "
+                >Description is required</em
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="start_Date_Project">Start date</label>
+            <div class="input-group">
+              <input
+                class="form-control"
+                placeholder="yyyy-mm-dd"
+                name="start_Date_Project"
+                formControlName="start_Date_Project"
+                [(ngModel)]="modelStartDate"
+                ngbDatepicker
+                (dateSelect)="convertStartDate()"
+                #start_Date_Project="ngbDatepicker"
+              />
+              <button
+                class="btn btn-outline-secondary calendar"
+                (click)="start_Date_Project.toggle()"
+                type="button"
+              ></button>
+            </div>
+            <div class="col-md-6">
+              <em
+                *ngIf="
+                  validateControl('start_Date_Project') &&
+                  hasError('start_Date_Project', 'required')
+                "
+                >Start date is required</em
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="end_Date_Project">End date</label>
+            <div class="input-group">
+              <input
+                class="form-control"
+                placeholder="yyyy-mm-dd"
+                formControlName="end_Date_Project"
+                name="end_Date_Project"
+                [(ngModel)]="modelEndDate"
+                ngbDatepicker
+                (dateSelect)="convertEndDate()"
+                #end_Date_Project="ngbDatepicker"
+              />
+              <button
+                class="btn btn-outline-secondary calendar"
+                (click)="end_Date_Project.toggle()"
+                type="button"
+              ></button>
+            </div>
+            <div class="col-md-6">
+              <em
+                *ngIf="
+                  validateControl('end_Date_Project') &&
+                  hasError('end_Date_Project', 'required')
+                "
+                >End date is required</em
+              >
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="submit"
+              class="btn btn-outline-dark"
+              [disabled]="!projectForm.valid"
+              (click)="modal.close('Save click')"
+            >
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </ng-template>
+    <!-- Search by id -->
+    <!-- <input type="text" [(ngModel)]="projectId" />
+    <button (click)="getProjectById()">Search</button> -->
+
+    <!-- //Delete by id -->
+    <!-- <input type="text" [(ngModel)]="projectId" />
+    <button (click)="deleteProjectById()">Delete</button> -->
+
+    <!-- //Delete by name -->
+    <!-- <input type="text" [(ngModel)]="projectName" />
+    <button (click)="deleteProjectByName()">Delete</button> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,882 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\tasksservices\\repository\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|solutionrelative:tasksservices\\repository\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\tasksservices\\repository\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|solutionrelative:tasksservices\\repository\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\pbiservices\\model\\pbi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|solutionrelative:pbiservices\\model\\pbi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\pbiservices\\repository\\pbirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|solutionrelative:pbiservices\\repository\\pbirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\userservice\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|solutionrelative:userservice\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7076F717-A2F2-42CD-BCFB-615E63516FC9}|ProjectServices\\ProjectServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\projectservices\\repository\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7076F717-A2F2-42CD-BCFB-615E63516FC9}|ProjectServices\\ProjectServices.csproj|solutionrelative:projectservices\\repository\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7076F717-A2F2-42CD-BCFB-615E63516FC9}|ProjectServices\\ProjectServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\projectservices\\model\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7076F717-A2F2-42CD-BCFB-615E63516FC9}|ProjectServices\\ProjectServices.csproj|solutionrelative:projectservices\\model\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B512629-3F1B-4BF8-83CE-18B59A0918DC}|CommonService\\CommonServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\commonservice\\commonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B512629-3F1B-4BF8-83CE-18B59A0918DC}|CommonService\\CommonServices.csproj|solutionrelative:commonservice\\commonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7857A2EC-5BC6-43E8-B6D5-004CE6806BEC}|AssignmentAPI\\AssignmentAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\assignmentapi\\controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7857A2EC-5BC6-43E8-B6D5-004CE6806BEC}|AssignmentAPI\\AssignmentAPI.csproj|solutionrelative:assignmentapi\\controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F5B70F-7EDA-4F53-9FF1-0193C61171E2}|Sprint_management\\SprintAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\sprint_management\\controllers\\sprintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F5B70F-7EDA-4F53-9FF1-0193C61171E2}|Sprint_management\\SprintAPI.csproj|solutionrelative:sprint_management\\controllers\\sprintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{684D68AD-D605-4387-9123-188471A434FD}|TaskAPI\\TaskAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\taskapi\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{684D68AD-D605-4387-9123-188471A434FD}|TaskAPI\\TaskAPI.csproj|solutionrelative:taskapi\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{684D68AD-D605-4387-9123-188471A434FD}|TaskAPI\\TaskAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\taskapi\\model\\taskrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{684D68AD-D605-4387-9123-188471A434FD}|TaskAPI\\TaskAPI.csproj|solutionrelative:taskapi\\model\\taskrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0ACC3B-D057-4FB5-8E08-0E71613A4DE8}|ProjectAPI\\ProjectAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\projectapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0ACC3B-D057-4FB5-8E08-0E71613A4DE8}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E9431EF-FB87-4211-8145-F5F7CF07BE63}|PbiAPI\\PbiAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\pbiapi\\controllers\\pbicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E9431EF-FB87-4211-8145-F5F7CF07BE63}|PbiAPI\\PbiAPI.csproj|solutionrelative:pbiapi\\controllers\\pbicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\pbiservices\\repository\\ipbirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|solutionrelative:pbiservices\\repository\\ipbirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\pbiservices\\model\\pbirequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|solutionrelative:pbiservices\\model\\pbirequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E9431EF-FB87-4211-8145-F5F7CF07BE63}|PbiAPI\\PbiAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\pbiapi\\model\\pbirequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E9431EF-FB87-4211-8145-F5F7CF07BE63}|PbiAPI\\PbiAPI.csproj|solutionrelative:pbiapi\\model\\pbirequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\tasksservices\\service\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|solutionrelative:tasksservices\\service\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\tasksservices\\service\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|solutionrelative:tasksservices\\service\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\pbiservices\\service\\pbiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|solutionrelative:pbiservices\\service\\pbiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\pbiservices\\service\\ipbiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FED9572-1DE1-4682-B7FC-A05FE8896C0B}|PbiServices\\PbiServices.csproj|solutionrelative:pbiservices\\service\\ipbiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\userservice\\repository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|solutionrelative:userservice\\repository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E02331D5-23D2-45F1-B3CE-92AF92707E47}|TaskManagementApp\\TaskManagementApp.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\taskmanagementapp\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E02331D5-23D2-45F1-B3CE-92AF92707E47}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\userservice\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|solutionrelative:userservice\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\userservice\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|solutionrelative:userservice\\service\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94C411F-5510-42A2-9A71-52B2502A0456}|SprintService\\SprintServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\sprintservice\\model\\sprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94C411F-5510-42A2-9A71-52B2502A0456}|SprintService\\SprintServices.csproj|solutionrelative:sprintservice\\model\\sprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\userservice\\model\\userrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|solutionrelative:userservice\\model\\userrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94C411F-5510-42A2-9A71-52B2502A0456}|SprintService\\SprintServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\sprintservice\\repository\\sprintrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94C411F-5510-42A2-9A71-52B2502A0456}|SprintService\\SprintServices.csproj|solutionrelative:sprintservice\\repository\\sprintrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94C411F-5510-42A2-9A71-52B2502A0456}|SprintService\\SprintServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\sprintservice\\repository\\isprintrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94C411F-5510-42A2-9A71-52B2502A0456}|SprintService\\SprintServices.csproj|solutionrelative:sprintservice\\repository\\isprintrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\userservice\\service\\userauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|solutionrelative:userservice\\service\\userauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94C411F-5510-42A2-9A71-52B2502A0456}|SprintService\\SprintServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\sprintservice\\model\\sprintrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C94C411F-5510-42A2-9A71-52B2502A0456}|SprintService\\SprintServices.csproj|solutionrelative:sprintservice\\model\\sprintrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F5B70F-7EDA-4F53-9FF1-0193C61171E2}|Sprint_management\\SprintAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\sprint_management\\model\\sprintrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F5B70F-7EDA-4F53-9FF1-0193C61171E2}|Sprint_management\\SprintAPI.csproj|solutionrelative:sprint_management\\model\\sprintrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7076F717-A2F2-42CD-BCFB-615E63516FC9}|ProjectServices\\ProjectServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\projectservices\\service\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7076F717-A2F2-42CD-BCFB-615E63516FC9}|ProjectServices\\ProjectServices.csproj|solutionrelative:projectservices\\service\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7076F717-A2F2-42CD-BCFB-615E63516FC9}|ProjectServices\\ProjectServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\projectservices\\service\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7076F717-A2F2-42CD-BCFB-615E63516FC9}|ProjectServices\\ProjectServices.csproj|solutionrelative:projectservices\\service\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7076F717-A2F2-42CD-BCFB-615E63516FC9}|ProjectServices\\ProjectServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\projectservices\\repository\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7076F717-A2F2-42CD-BCFB-615E63516FC9}|ProjectServices\\ProjectServices.csproj|solutionrelative:projectservices\\repository\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0ACC3B-D057-4FB5-8E08-0E71613A4DE8}|ProjectAPI\\ProjectAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\projectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0ACC3B-D057-4FB5-8E08-0E71613A4DE8}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{831F7605-00E2-45C3-8E89-68B2FDEFD7DD}|AssignmentServices\\AssignmentServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\assignmentservices\\repository\\assignmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{831F7605-00E2-45C3-8E89-68B2FDEFD7DD}|AssignmentServices\\AssignmentServices.csproj|solutionrelative:assignmentservices\\repository\\assignmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{831F7605-00E2-45C3-8E89-68B2FDEFD7DD}|AssignmentServices\\AssignmentServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\assignmentservices\\service\\assignmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{831F7605-00E2-45C3-8E89-68B2FDEFD7DD}|AssignmentServices\\AssignmentServices.csproj|solutionrelative:assignmentservices\\service\\assignmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7857A2EC-5BC6-43E8-B6D5-004CE6806BEC}|AssignmentAPI\\AssignmentAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\assignmentapi\\model\\assignmentrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7857A2EC-5BC6-43E8-B6D5-004CE6806BEC}|AssignmentAPI\\AssignmentAPI.csproj|solutionrelative:assignmentapi\\model\\assignmentrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{831F7605-00E2-45C3-8E89-68B2FDEFD7DD}|AssignmentServices\\AssignmentServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\assignmentservices\\model\\assignmentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{831F7605-00E2-45C3-8E89-68B2FDEFD7DD}|AssignmentServices\\AssignmentServices.csproj|solutionrelative:assignmentservices\\model\\assignmentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{831F7605-00E2-45C3-8E89-68B2FDEFD7DD}|AssignmentServices\\AssignmentServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\assignmentservices\\model\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{831F7605-00E2-45C3-8E89-68B2FDEFD7DD}|AssignmentServices\\AssignmentServices.csproj|solutionrelative:assignmentservices\\model\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E02331D5-23D2-45F1-B3CE-92AF92707E47}|TaskManagementApp\\TaskManagementApp.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\taskmanagementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E02331D5-23D2-45F1-B3CE-92AF92707E47}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\tasksservices\\model\\taskrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|solutionrelative:tasksservices\\model\\taskrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\tasksservices\\model\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B990A05-4C12-4976-BCFA-E6021B340C3E}|TasksServices\\TasksServices.csproj|solutionrelative:tasksservices\\model\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E9431EF-FB87-4211-8145-F5F7CF07BE63}|PbiAPI\\PbiAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\pbiapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E9431EF-FB87-4211-8145-F5F7CF07BE63}|PbiAPI\\PbiAPI.csproj|solutionrelative:pbiapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E9431EF-FB87-4211-8145-F5F7CF07BE63}|PbiAPI\\PbiAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\pbiapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4E9431EF-FB87-4211-8145-F5F7CF07BE63}|PbiAPI\\PbiAPI.csproj|solutionrelative:pbiapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E02331D5-23D2-45F1-B3CE-92AF92707E47}|TaskManagementApp\\TaskManagementApp.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\taskmanagementapp\\model\\userrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E02331D5-23D2-45F1-B3CE-92AF92707E47}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\model\\userrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\userservice\\service\\iuserauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|solutionrelative:userservice\\service\\iuserauthorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{684D68AD-D605-4387-9123-188471A434FD}|TaskAPI\\TaskAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\taskapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{684D68AD-D605-4387-9123-188471A434FD}|TaskAPI\\TaskAPI.csproj|solutionrelative:taskapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E02331D5-23D2-45F1-B3CE-92AF92707E47}|TaskManagementApp\\TaskManagementApp.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\taskmanagementapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E02331D5-23D2-45F1-B3CE-92AF92707E47}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF0ACC3B-D057-4FB5-8E08-0E71613A4DE8}|ProjectAPI\\ProjectAPI.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\projectapi\\model\\projectrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0ACC3B-D057-4FB5-8E08-0E71613A4DE8}|ProjectAPI\\ProjectAPI.csproj|solutionrelative:projectapi\\model\\projectrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\userservice\\userservices.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3D457D24-5769-40A5-B184-2ADC79AF3C8D}|UserService\\UserServices.csproj|solutionrelative:userservice\\userservices.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Program Files\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C94C411F-5510-42A2-9A71-52B2502A0456}|SprintService\\SprintServices.csproj|c:\\users\\vali\\documents\\github\\management_task\\backend\\taskmanagementapp\\sprintservice\\sprintservices.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C94C411F-5510-42A2-9A71-52B2502A0456}|SprintService\\SprintServices.csproj|solutionrelative:sprintservice\\sprintservices.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1373,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PbiRequestModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiAPI\\Model\\PbiRequestModel.cs",
+              "RelativeDocumentMoniker": "PbiAPI\\Model\\PbiRequestModel.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiAPI\\Model\\PbiRequestModel.cs",
+              "RelativeToolTip": "PbiAPI\\Model\\PbiRequestModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAoAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CommonService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\CommonService\\CommonService.cs",
+              "RelativeDocumentMoniker": "CommonService\\CommonService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\CommonService\\CommonService.cs",
+              "RelativeToolTip": "CommonService\\CommonService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectServices\\Model\\Project.cs",
+              "RelativeDocumentMoniker": "ProjectServices\\Model\\Project.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectServices\\Model\\Project.cs",
+              "RelativeToolTip": "ProjectServices\\Model\\Project.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAADgvwwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PbiRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Repository\\PbiRepository.cs",
+              "RelativeDocumentMoniker": "PbiServices\\Repository\\PbiRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Repository\\PbiRepository.cs",
+              "RelativeToolTip": "PbiServices\\Repository\\PbiRepository.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAA+wGAAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pbi.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Model\\Pbi.cs",
+              "RelativeDocumentMoniker": "PbiServices\\Model\\Pbi.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Model\\Pbi.cs",
+              "RelativeToolTip": "PbiServices\\Model\\Pbi.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA3wAoAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Repository\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "TasksServices\\Repository\\ITaskRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Repository\\ITaskRepository.cs",
+              "RelativeToolTip": "TasksServices\\Repository\\ITaskRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAABUAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Repository\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "TasksServices\\Repository\\TaskRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Repository\\TaskRepository.cs",
+              "RelativeToolTip": "TasksServices\\Repository\\TaskRepository.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAUwFAAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectServices\\Repository\\ProjectRepository.cs",
+              "RelativeDocumentMoniker": "ProjectServices\\Repository\\ProjectRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectServices\\Repository\\ProjectRepository.cs",
+              "RelativeToolTip": "ProjectServices\\Repository\\ProjectRepository.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAcwGcAAABwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "UserService\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "UserService\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAjwKgAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AssignmentController.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentAPI\\Controllers\\AssignmentController.cs",
+              "RelativeDocumentMoniker": "AssignmentAPI\\Controllers\\AssignmentController.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentAPI\\Controllers\\AssignmentController.cs",
+              "RelativeToolTip": "AssignmentAPI\\Controllers\\AssignmentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TaskRequestModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskAPI\\Model\\TaskRequestModel.cs",
+              "RelativeDocumentMoniker": "TaskAPI\\Model\\TaskRequestModel.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskAPI\\Model\\TaskRequestModel.cs",
+              "RelativeToolTip": "TaskAPI\\Model\\TaskRequestModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectAPI\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "ProjectAPI\\Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectAPI\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "ProjectAPI\\Controllers\\ProjectController.cs",
+              "ViewState": "AQIAAMgAAAAAAAAAAAAuwM4AAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SprintController.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\Sprint_management\\Controllers\\SprintController.cs",
+              "RelativeDocumentMoniker": "Sprint_management\\Controllers\\SprintController.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\Sprint_management\\Controllers\\SprintController.cs",
+              "RelativeToolTip": "Sprint_management\\Controllers\\SprintController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskAPI\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "TaskAPI\\Controllers\\TaskController.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskAPI\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "TaskAPI\\Controllers\\TaskController.cs",
+              "ViewState": "AQIAAOMAAAAAAAAAAAAqwPEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PbiController.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiAPI\\Controllers\\PbiController.cs",
+              "RelativeDocumentMoniker": "PbiAPI\\Controllers\\PbiController.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiAPI\\Controllers\\PbiController.cs",
+              "RelativeToolTip": "PbiAPI\\Controllers\\PbiController.cs",
+              "ViewState": "AQIAADUBAAAAAAAAAAAgwFABAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IPbiRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Repository\\IPbiRepository.cs",
+              "RelativeDocumentMoniker": "PbiServices\\Repository\\IPbiRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Repository\\IPbiRepository.cs",
+              "RelativeToolTip": "PbiServices\\Repository\\IPbiRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAUwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ITaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Service\\ITaskService.cs",
+              "RelativeDocumentMoniker": "TasksServices\\Service\\ITaskService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Service\\ITaskService.cs",
+              "RelativeToolTip": "TasksServices\\Service\\ITaskService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PbiRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Model\\PbiRequest.cs",
+              "RelativeDocumentMoniker": "PbiServices\\Model\\PbiRequest.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Model\\PbiRequest.cs",
+              "RelativeToolTip": "PbiServices\\Model\\PbiRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAACBjwA8AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Service\\TaskService.cs",
+              "RelativeDocumentMoniker": "TasksServices\\Service\\TaskService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Service\\TaskService.cs",
+              "RelativeToolTip": "TasksServices\\Service\\TaskService.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAQwDgAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PbiService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Service\\PbiService.cs",
+              "RelativeDocumentMoniker": "PbiServices\\Service\\PbiService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Service\\PbiService.cs",
+              "RelativeToolTip": "PbiServices\\Service\\PbiService.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAuwFYAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IPbiService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Service\\IPbiService.cs",
+              "RelativeDocumentMoniker": "PbiServices\\Service\\IPbiService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiServices\\Service\\IPbiService.cs",
+              "RelativeToolTip": "PbiServices\\Service\\IPbiService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAxwBoAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskManagementApp\\Controller\\UserController.cs",
+              "RelativeDocumentMoniker": "TaskManagementApp\\Controller\\UserController.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskManagementApp\\Controller\\UserController.cs",
+              "RelativeToolTip": "TaskManagementApp\\Controller\\UserController.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAYwKIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Model\\UserRequest.cs",
+              "RelativeDocumentMoniker": "UserService\\Model\\UserRequest.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Model\\UserRequest.cs",
+              "RelativeToolTip": "UserService\\Model\\UserRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Repository\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "UserService\\Repository\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Repository\\IUserRepository.cs",
+              "RelativeToolTip": "UserService\\Repository\\IUserRepository.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA3wBwAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "UserService\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Service\\UserService.cs",
+              "RelativeToolTip": "UserService\\Service\\UserService.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAswGUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Service\\IUserService.cs",
+              "RelativeDocumentMoniker": "UserService\\Service\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Service\\IUserService.cs",
+              "RelativeToolTip": "UserService\\Service\\IUserService.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAuwBcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Sprint.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\SprintService\\Model\\Sprint.cs",
+              "RelativeDocumentMoniker": "SprintService\\Model\\Sprint.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\SprintService\\Model\\Sprint.cs",
+              "RelativeToolTip": "SprintService\\Model\\Sprint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ISprintRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\SprintService\\Repository\\ISprintRepository.cs",
+              "RelativeDocumentMoniker": "SprintService\\Repository\\ISprintRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\SprintService\\Repository\\ISprintRepository.cs",
+              "RelativeToolTip": "SprintService\\Repository\\ISprintRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SprintRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\SprintService\\Repository\\SprintRepository.cs",
+              "RelativeDocumentMoniker": "SprintService\\Repository\\SprintRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\SprintService\\Repository\\SprintRepository.cs",
+              "RelativeToolTip": "SprintService\\Repository\\SprintRepository.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAUwEcAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UserAuthorizationService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Service\\UserAuthorizationService.cs",
+              "RelativeDocumentMoniker": "UserService\\Service\\UserAuthorizationService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Service\\UserAuthorizationService.cs",
+              "RelativeToolTip": "UserService\\Service\\UserAuthorizationService.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAkwHwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SprintRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\SprintService\\Model\\SprintRequest.cs",
+              "RelativeDocumentMoniker": "SprintService\\Model\\SprintRequest.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\SprintService\\Model\\SprintRequest.cs",
+              "RelativeToolTip": "SprintService\\Model\\SprintRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SprintRequestModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\Sprint_management\\Model\\SprintRequestModel.cs",
+              "RelativeDocumentMoniker": "Sprint_management\\Model\\SprintRequestModel.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\Sprint_management\\Model\\SprintRequestModel.cs",
+              "RelativeToolTip": "Sprint_management\\Model\\SprintRequestModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectServices\\Service\\IProjectService.cs",
+              "RelativeDocumentMoniker": "ProjectServices\\Service\\IProjectService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectServices\\Service\\IProjectService.cs",
+              "RelativeToolTip": "ProjectServices\\Service\\IProjectService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAACBjwBMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectServices\\Service\\ProjectService.cs",
+              "RelativeDocumentMoniker": "ProjectServices\\Service\\ProjectService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectServices\\Service\\ProjectService.cs",
+              "RelativeToolTip": "ProjectServices\\Service\\ProjectService.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAswDUAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectServices\\Repository\\IProjectRepository.cs",
+              "RelativeDocumentMoniker": "ProjectServices\\Repository\\IProjectRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectServices\\Repository\\IProjectRepository.cs",
+              "RelativeToolTip": "ProjectServices\\Repository\\IProjectRepository.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBgAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectAPI\\Program.cs",
+              "RelativeDocumentMoniker": "ProjectAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectAPI\\Program.cs",
+              "RelativeToolTip": "ProjectAPI\\Program.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAhwCEAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AssignmentService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentServices\\Service\\AssignmentService.cs",
+              "RelativeDocumentMoniker": "AssignmentServices\\Service\\AssignmentService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentServices\\Service\\AssignmentService.cs",
+              "RelativeToolTip": "AssignmentServices\\Service\\AssignmentService.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "AssignmentRequestModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentAPI\\Model\\AssignmentRequestModel.cs",
+              "RelativeDocumentMoniker": "AssignmentAPI\\Model\\AssignmentRequestModel.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentAPI\\Model\\AssignmentRequestModel.cs",
+              "RelativeToolTip": "AssignmentAPI\\Model\\AssignmentRequestModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "AssignmentRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentServices\\Model\\AssignmentRequest.cs",
+              "RelativeDocumentMoniker": "AssignmentServices\\Model\\AssignmentRequest.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentServices\\Model\\AssignmentRequest.cs",
+              "RelativeToolTip": "AssignmentServices\\Model\\AssignmentRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Assignment.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentServices\\Model\\Assignment.cs",
+              "RelativeDocumentMoniker": "AssignmentServices\\Model\\Assignment.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentServices\\Model\\Assignment.cs",
+              "RelativeToolTip": "AssignmentServices\\Model\\Assignment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AssignmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentServices\\Repository\\AssignmentRepository.cs",
+              "RelativeDocumentMoniker": "AssignmentServices\\Repository\\AssignmentRepository.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\AssignmentServices\\Repository\\AssignmentRepository.cs",
+              "RelativeToolTip": "AssignmentServices\\Repository\\AssignmentRepository.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAuwEUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskManagementApp\\Program.cs",
+              "RelativeDocumentMoniker": "TaskManagementApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskManagementApp\\Program.cs",
+              "RelativeToolTip": "TaskManagementApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwEcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "TaskRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Model\\TaskRequest.cs",
+              "RelativeDocumentMoniker": "TasksServices\\Model\\TaskRequest.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Model\\TaskRequest.cs",
+              "RelativeToolTip": "TasksServices\\Model\\TaskRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Model\\Task.cs",
+              "RelativeDocumentMoniker": "TasksServices\\Model\\Task.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TasksServices\\Model\\Task.cs",
+              "RelativeToolTip": "TasksServices\\Model\\Task.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwA8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiAPI\\Program.cs",
+              "RelativeDocumentMoniker": "PbiAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiAPI\\Program.cs",
+              "RelativeToolTip": "PbiAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAEB1wC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UserRequestModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskManagementApp\\Model\\UserRequestModel.cs",
+              "RelativeDocumentMoniker": "TaskManagementApp\\Model\\UserRequestModel.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskManagementApp\\Model\\UserRequestModel.cs",
+              "RelativeToolTip": "TaskManagementApp\\Model\\UserRequestModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "PbiAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\PbiAPI\\appsettings.json",
+              "RelativeToolTip": "PbiAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-01-12T19:34:05.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IUserAuthorizationService.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Service\\IUserAuthorizationService.cs",
+              "RelativeDocumentMoniker": "UserService\\Service\\IUserAuthorizationService.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\Service\\IUserAuthorizationService.cs",
+              "RelativeToolTip": "UserService\\Service\\IUserAuthorizationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskAPI\\Program.cs",
+              "RelativeDocumentMoniker": "TaskAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskAPI\\Program.cs",
+              "RelativeToolTip": "TaskAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIB5wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskManagementApp\\appsettings.json",
+              "RelativeDocumentMoniker": "TaskManagementApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\TaskManagementApp\\appsettings.json",
+              "RelativeToolTip": "TaskManagementApp\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-01-12T19:34:05.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ProjectRequestModel.cs",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectAPI\\Model\\ProjectRequestModel.cs",
+              "RelativeDocumentMoniker": "ProjectAPI\\Model\\ProjectRequestModel.cs",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\ProjectAPI\\Model\\ProjectRequestModel.cs",
+              "RelativeToolTip": "ProjectAPI\\Model\\ProjectRequestModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-12T19:34:05.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "UserServices.csproj",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\UserServices.csproj",
+              "RelativeDocumentMoniker": "UserService\\UserServices.csproj",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\UserService\\UserServices.csproj",
+              "RelativeToolTip": "UserService\\UserServices.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-01-12T19:34:05.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "E:\\Program Files\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "E:\\Program Files\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAAPkGAAAAAAAAAAD4vwkHAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2022-09-01T19:58:15.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "SprintServices.csproj",
+              "DocumentMoniker": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\SprintService\\SprintServices.csproj",
+              "RelativeDocumentMoniker": "SprintService\\SprintServices.csproj",
+              "ToolTip": "C:\\Users\\Vali\\Documents\\GitHub\\Management_task\\Backend\\TaskManagementApp\\SprintService\\SprintServices.csproj",
+              "RelativeToolTip": "SprintService\\SprintServices.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-01-12T19:34:05.468Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
