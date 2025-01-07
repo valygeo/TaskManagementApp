@@ -1,0 +1,379 @@
+USE [master]
+GO
+
+/****** Object:  Database [TasksDatabase]    Script Date: 1/7/2025 12:10:51 PM ******/
+CREATE DATABASE [TasksDatabase]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'TasksDatabase', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\TasksDatabase.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'TasksDatabase_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\TasksDatabase_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+GO
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [TasksDatabase].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+
+ALTER DATABASE [TasksDatabase] SET ANSI_NULL_DEFAULT OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET ANSI_NULLS OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET ANSI_PADDING OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET ANSI_WARNINGS OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET ARITHABORT OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET AUTO_CLOSE ON 
+GO
+
+ALTER DATABASE [TasksDatabase] SET AUTO_SHRINK OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET AUTO_UPDATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [TasksDatabase] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET CURSOR_DEFAULT  GLOBAL 
+GO
+
+ALTER DATABASE [TasksDatabase] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET NUMERIC_ROUNDABORT OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET QUOTED_IDENTIFIER OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET RECURSIVE_TRIGGERS OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET  ENABLE_BROKER 
+GO
+
+ALTER DATABASE [TasksDatabase] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET TRUSTWORTHY OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET PARAMETERIZATION SIMPLE 
+GO
+
+ALTER DATABASE [TasksDatabase] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET HONOR_BROKER_PRIORITY OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET RECOVERY SIMPLE 
+GO
+
+ALTER DATABASE [TasksDatabase] SET  MULTI_USER 
+GO
+
+ALTER DATABASE [TasksDatabase] SET PAGE_VERIFY CHECKSUM  
+GO
+
+ALTER DATABASE [TasksDatabase] SET DB_CHAINING OFF 
+GO
+
+ALTER DATABASE [TasksDatabase] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+
+ALTER DATABASE [TasksDatabase] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+
+ALTER DATABASE [TasksDatabase] SET DELAYED_DURABILITY = DISABLED 
+GO
+
+ALTER DATABASE [TasksDatabase] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+
+ALTER DATABASE [TasksDatabase] SET QUERY_STORE = ON
+GO
+
+ALTER DATABASE [TasksDatabase] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 1000, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO, MAX_PLANS_PER_QUERY = 200, WAIT_STATS_CAPTURE_MODE = ON)
+GO
+
+ALTER DATABASE [TasksDatabase] SET  READ_WRITE 
+GO
+
+
+USE [TasksDatabase]
+GO
+
+/****** Object:  Table [dbo].[User]    Script Date: 1/7/2025 12:11:01 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[User](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[username] [varchar](255) NULL,
+	[email] [varchar](255) NULL,
+	[password] [varchar](255) NULL,
+	[is_deleted] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [TasksDatabase]
+GO
+
+/****** Object:  Table [dbo].[Project]    Script Date: 1/7/2025 12:11:10 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Project](
+	[project_id] [int] IDENTITY(1,1) NOT NULL,
+	[project_name] [varchar](255) NULL,
+	[project_description] [varchar](255) NULL,
+	[start_date_project] [datetime] NULL,
+	[end_date_project] [datetime] NULL,
+	[is_deleted] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[project_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [TasksDatabase]
+GO
+
+/****** Object:  Table [dbo].[Sprint]    Script Date: 1/7/2025 12:11:17 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Sprint](
+	[sprint_id] [int] IDENTITY(1,1) NOT NULL,
+	[sprint_name] [varchar](255) NULL,
+	[sprint_description] [varchar](255) NULL,
+	[start_date_sprint] [datetime] NULL,
+	[end_date_sprint] [datetime] NULL,
+	[project_id] [int] NULL,
+	[is_deleted] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[sprint_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Sprint]  WITH CHECK ADD FOREIGN KEY([project_id])
+REFERENCES [dbo].[Project] ([project_id])
+GO
+
+ALTER TABLE [dbo].[Sprint]  WITH CHECK ADD FOREIGN KEY([project_id])
+REFERENCES [dbo].[Project] ([project_id])
+GO
+
+
+USE [TasksDatabase]
+GO
+
+/****** Object:  Table [dbo].[Pbi]    Script Date: 1/7/2025 12:11:32 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Pbi](
+	[pbi_id] [int] IDENTITY(1,1) NOT NULL,
+	[pbi_name] [varchar](255) NULL,
+	[pbi_description] [varchar](255) NULL,
+	[start_date_pbi] [datetime] NULL,
+	[end_date_pbi] [datetime] NULL,
+	[is_deleted] [bit] NULL,
+	[id] [int] NULL,
+	[sprint_id] [int] NULL,
+	[pbi_type] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[pbi_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Pbi]  WITH CHECK ADD FOREIGN KEY([id])
+REFERENCES [dbo].[User] ([id])
+GO
+
+ALTER TABLE [dbo].[Pbi]  WITH CHECK ADD FOREIGN KEY([sprint_id])
+REFERENCES [dbo].[Sprint] ([sprint_id])
+GO
+
+
+USE [TasksDatabase]
+GO
+
+/****** Object:  Table [dbo].[Task]    Script Date: 1/7/2025 12:11:42 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Task](
+	[task_id] [int] IDENTITY(1,1) NOT NULL,
+	[task_name] [varchar](255) NULL,
+	[task_description] [varchar](255) NULL,
+	[is_deleted] [bit] NULL,
+	[id] [int] NULL,
+	[pbi_id] [int] NULL,
+	[pbi_type] [varchar](255) NULL,
+	[task_status] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[task_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Task]  WITH CHECK ADD FOREIGN KEY([id])
+REFERENCES [dbo].[User] ([id])
+GO
+
+ALTER TABLE [dbo].[Task]  WITH CHECK ADD FOREIGN KEY([pbi_id])
+REFERENCES [dbo].[Pbi] ([pbi_id])
+GO
+
+
+USE [TasksDatabase]
+GO
+
+/****** Object:  Table [dbo].[Bug]    Script Date: 1/7/2025 12:11:50 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Bug](
+	[bug_id] [int] IDENTITY(1,1) NOT NULL,
+	[bug_name] [varchar](255) NULL,
+	[bug_description] [varchar](255) NULL,
+	[sprint_id] [int] NULL,
+	[task_id] [int] NULL,
+ CONSTRAINT [pk_bug_id] PRIMARY KEY CLUSTERED 
+(
+	[bug_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Bug]  WITH CHECK ADD  CONSTRAINT [fk_leg4] FOREIGN KEY([sprint_id])
+REFERENCES [dbo].[Sprint] ([sprint_id])
+GO
+
+ALTER TABLE [dbo].[Bug] CHECK CONSTRAINT [fk_leg4]
+GO
+
+ALTER TABLE [dbo].[Bug]  WITH CHECK ADD  CONSTRAINT [fk_leg5] FOREIGN KEY([task_id])
+REFERENCES [dbo].[Task] ([task_id])
+GO
+
+ALTER TABLE [dbo].[Bug] CHECK CONSTRAINT [fk_leg5]
+GO
+
+
+USE [TasksDatabase]
+GO
+
+/****** Object:  Table [dbo].[Feature]    Script Date: 1/7/2025 12:12:02 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Feature](
+	[feature_id] [int] IDENTITY(1,1) NOT NULL,
+	[task_name] [varchar](255) NULL,
+	[task_description] [varchar](255) NULL,
+	[end_date_task] [datetime] NULL,
+	[sprint_id] [int] NULL,
+	[task_id] [int] NULL,
+ CONSTRAINT [pk_feature_id] PRIMARY KEY CLUSTERED 
+(
+	[feature_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Feature]  WITH CHECK ADD  CONSTRAINT [fk_leg6] FOREIGN KEY([sprint_id])
+REFERENCES [dbo].[Sprint] ([sprint_id])
+GO
+
+ALTER TABLE [dbo].[Feature] CHECK CONSTRAINT [fk_leg6]
+GO
+
+ALTER TABLE [dbo].[Feature]  WITH CHECK ADD  CONSTRAINT [fk_leg7] FOREIGN KEY([task_id])
+REFERENCES [dbo].[Task] ([task_id])
+GO
+
+ALTER TABLE [dbo].[Feature] CHECK CONSTRAINT [fk_leg7]
+GO
+
+
+USE [TasksDatabase]
+GO
+
+/****** Object:  Table [dbo].[Assignment]    Script Date: 1/7/2025 12:12:12 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Assignment](
+	[id] [int] NULL,
+	[project_id] [int] NULL,
+	[is_deleted] [bit] NULL
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Assignment]  WITH CHECK ADD FOREIGN KEY([project_id])
+REFERENCES [dbo].[Project] ([project_id])
+GO
+
+ALTER TABLE [dbo].[Assignment]  WITH CHECK ADD  CONSTRAINT [fk_leg1] FOREIGN KEY([id])
+REFERENCES [dbo].[User] ([id])
+GO
+
+ALTER TABLE [dbo].[Assignment] CHECK CONSTRAINT [fk_leg1]
+GO
+
+
