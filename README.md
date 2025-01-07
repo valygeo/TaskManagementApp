@@ -1,1 +1,2 @@
 # TaskManagementApp
+The purpose of this application is to manage the tasks inside a company. The user can create projects and can assign persons to that projects, inside a project there are sprints, tasks, bugs.
